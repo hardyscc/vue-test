@@ -37,11 +37,6 @@ module.exports = {
         optionalDependencies: ['test/unit/index.js']
       }
     ],
-    // support windows linebreak style
-    'linebreak-style': [
-      'error',
-      /^win/.test(process.platform) ? 'windows' : 'unix'
-    ],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
