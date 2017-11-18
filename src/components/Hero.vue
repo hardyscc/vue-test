@@ -5,9 +5,9 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <a class="navbar-item" href="../">
+              <router-link class="navbar-item" to="/">
                 <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
-              </a>
+              </router-link>
               <span class="navbar-burger burger" @click="triggleMenu">
                 <span></span>
                 <span></span>
