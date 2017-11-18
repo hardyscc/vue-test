@@ -1,6 +1,5 @@
 <template>
-
-  <body>
+  <div class="page">
     <section class="hero is-info is-medium is-bold">
       <div class="hero-head">
         <nav class="navbar">
@@ -9,13 +8,13 @@
               <a class="navbar-item" href="../">
                 <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
               </a>
-              <span class="navbar-burger burger" data-target="navbarMenu">
+              <span class="navbar-burger burger" @click="triggleMenu">
                 <span></span>
                 <span></span>
                 <span></span>
               </span>
             </div>
-            <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-menu" :class="{ 'is-active': isMenuActive }">
               <div class="navbar-end">
                 <a class="navbar-item is-active">
                   Home
@@ -226,19 +225,27 @@
         </div>
       </div>
     </footer>
-  </body>
-
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  data() {
+    return {
+      isMenuActive: false
+    }
+  },
+  methods: {
+    triggleMenu() {
+      this.isMenuActive = !this.isMenuActive
+    }
+  }
 }
 </script>
 
 <style scoped>
-html,
-body {
+.page {
   background: #eff3f4;
   font-family: 'Open Sans', serif;
 }
