@@ -6,6 +6,9 @@
       <li>
         <router-link to="/landing">Landing</router-link>
       </li>
+      <li>
+        <router-link to="/hero">Hero</router-link>
+      </li>
     </ul>
   </div>
 </template>
