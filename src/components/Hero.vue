@@ -8,7 +8,7 @@
               <router-link class="navbar-item" to="/">
                 <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
               </router-link>
-              <span class="navbar-burger burger" @click="triggleMenu">
+              <span class="navbar-burger burger" @click="isMenuActive = !isMenuActive">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -234,11 +234,6 @@ export default {
   data() {
     return {
       isMenuActive: false
-    }
-  },
-  methods: {
-    triggleMenu() {
-      this.isMenuActive = !this.isMenuActive
     }
   }
 }
