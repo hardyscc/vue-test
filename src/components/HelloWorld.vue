@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">{{ hello.message }}</h1>
+      <div class="title">{{ hello.message }}</div>
       <div class="field is-grouped">
         <p class="control">
           <label class="label">Name</label>
@@ -13,17 +13,23 @@
           </span>
         </div>
       </div>
-      <div class="content">
-        <div>Layout Links</div>
-        <ul>
-          <li>
-            <router-link to="/landing">Landing</router-link>
-          </li>
-          <li>
-            <router-link to="/hero">Hero</router-link>
-          </li>
-        </ul>
+      <p class="content">
+        <a class="button is-info" @click="$store.commit('increment')"> Increment {{ $store.state.count }}</a>
+      </p>
+      <div class="subtitle">
+        <div class="content">
+          <div>Layout Links</div>
+          <ul>
+            <li>
+              <router-link to="/landing">Landing</router-link>
+            </li>
+            <li>
+              <router-link to="/hero">Hero</router-link>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
     </div>
   </section>
 </template>
