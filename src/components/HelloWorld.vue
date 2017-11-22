@@ -2,8 +2,10 @@
   <section class="section">
     <div class="container">
       <h1 class="title">{{ hello.message }}</h1>
-      <div class="field">
-        <label class="label">Name</label>
+      <div class="field is-grouped">
+        <p class="control">
+          <label class="label">Name</label>
+        </p>
         <div class="control has-icons-left">
           <input class="input" v-model="name" placeholder="Your Name Here">
           <span class="icon is-left">
