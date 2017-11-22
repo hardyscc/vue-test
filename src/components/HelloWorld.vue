@@ -1,21 +1,32 @@
 <template>
-  <div class="page">
-    <input v-model="name" placeholder="edit me">
-    <h1>{{ hello.message }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <router-link to="/landing">Landing</router-link>
-      </li>
-      <li>
-        <router-link to="/hero">Hero</router-link>
-      </li>
-    </ul>
-  </div>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">{{ hello.message }}</h1>
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control has-icons-left">
+          <input class="input" v-model="name" placeholder="Your Name Here">
+          <span class="icon is-left">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+      </div>
+      <div class="content">
+        <div>Layout Links</div>
+        <ul>
+          <li>
+            <router-link to="/landing">Landing</router-link>
+          </li>
+          <li>
+            <router-link to="/hero">Hero</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-// @ts-nocheck
 import gql from 'graphql-tag'
 
 export default {
@@ -45,11 +56,4 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.page {
-  padding: 5em 5em;
-  text-align: center;
-}
-</style>
 
